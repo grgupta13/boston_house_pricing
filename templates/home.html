@@ -1,1 +1,82 @@
-<h1>flask app</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston House Prediction</title>
+
+</head>
+<body>
+    <h2>Boston House Prediction</h2>
+    <form action ={{url_for('predict1')}} method="post">
+    <table cellpadding="10" cellspacing="2" align="center">
+        <th class="row1">Project Name</th>
+        <tr>
+            <td class="col1">CRIM</td>
+            <td class="col2"><input type="text" name="CRIM" id="PCRIM" placeholder="project name"></td>
+        </tr>
+
+        <tr>
+            <td class="col1">'ZN'</td>
+            <td class="col2"><input type="text" name='ZN' id='ZN' placeholder="project name"></td>
+        </tr>
+        
+        <tr>
+            <td class="col1">INDUS</td>
+            <td class="col2"><input type="text" name="INDUS" id="INDUS" placeholder="project name"></td>
+        </tr>
+        <tr>
+            <td class="col1">CHAS</td>
+            <td class="col2"><input type="text" name="CHAS" id="CHAS" placeholder="project name"></td>
+        </tr>
+        <tr>
+            <td class="col1">NOX</td>
+            <td class="col2"><input type="text" name="NOX" id="NOX" placeholder="project name"></td>
+        </tr>
+        <tr>
+            <td class="RM">RM</td>
+            <td class="col2"><input type="text" name="RM" id="RM" placeholder="project name"></td>
+        </tr>
+        <tr>
+            <td class="col1">AGE</td>
+            <td class="col2"><input type="text" name="AGE" id="AGE" placeholder="project name"></td>
+        </tr>
+        <tr>
+            <td class="col1">DIS</td>
+            <td class="col2"><input type="text" name="DIS" id="DIS" placeholder="project name"></td>
+        </tr>
+        <tr>
+            <td class="col1">RADTAX</td>
+            <td class="col2"><input type="text" name="RADTAX" id="RADTAX" placeholder="project name"></td>
+        </tr>
+        <tr>
+            <td class="col1">PTRATIO</td>
+            <td class="col2"><input type="text" name="PTRATIO" id="PTRATIO" placeholder="project name"></td>
+        </tr>
+        <tr>
+            <td class="col1">B</td>
+            <td class="col2"><input type="text" name="B" id="B" placeholder="project name"></td>
+        </tr>
+        <tr>
+            <td class="col1">LSTAT</td>
+            <td class="col2"><input type="text" name="LSTAT" id="LSTAT" placeholder="project name"></td>
+        </tr>
+        <tr>
+            <td class="col1">MEDV</td>
+            <td class="col2"><input type="text" name="MEDV" id="MEDV" placeholder="project name"></td>
+        </tr>
+        
+        <tr colspan="2" align="center">
+            <td>
+                <button type="submit" class="submit1"  >Submit</button>
+            </td>
+            
+        
+    </table>
+</form>
+{{prediction_text}}
+    <script src="project.js"></script>
+</body>
+
+</html>

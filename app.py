@@ -20,6 +20,16 @@ def predict():
     print("predictted :", predicted)
     return jsonify(predicted[0])
 
+@app.route('/predict1', methods=['POST'])
+def predict1():
+    print("form values", request.form.values())
+    data = [float(x) for x in request.form.values()]
+    pickled_model = pickle.load(open('regression_model.pkl','rb'))
+    pickled_std = pickle.load(open('std.pkl', 'rb'))    
+    scaled_data = pickled_std.transform(np.array(data).reshape(1,-1))
+    predicted = pickled_model.predict(scaled_data)
+    return render_template('home.html',prediction_text ="The predicted values is {}".format(predicted[0]))
+
 if __name__ == "__main__":
     app.run(debug = True)
 # new_sample1 = pickled_std.transform(boston.data[0].reshape(1,-1))

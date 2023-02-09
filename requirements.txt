@@ -5,3 +5,4 @@ Flask
 sklearn==0.0.post2
 matplotlib
 seaborn
+gunicorn
